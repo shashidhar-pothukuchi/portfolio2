@@ -1,3 +1,3 @@
 # Portfolio Website
 
-Under development
+check out my portfolio under https://shashidhar-pothukuchi.github.io/portfolio2/
