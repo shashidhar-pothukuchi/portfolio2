@@ -1,3 +1,3 @@
 # Portfolio Website
 
-check out my portfolio under https://shashidhar-pothukuchi.github.io/portfolio2/
+check out my portfolio under https://www.psds.dev
