@@ -2,6 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, Home, Sun, Moon, GraduationCap } from 'lucide-react';
 import profilePic from './assets/picture.jpg';
 
+const LeetCodeIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+  </svg>
+);
+
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [theme, setTheme] = useState('light');
@@ -58,29 +72,25 @@ const Portfolio = () => {
       title: "Smart Grocery Management Application",
       description: "Spearheaded the development of a full-stack MERN grocery inventory management system. Integrated React Router for navigation and React-Bootstrap for a responsive UI. Utilized Node.js with Express for server-side logic and Axios for API communication. Deployed with NoSQL MongoDB database using Mongo Atlas.",
       tech: ["React", "Node.js", "Express", "MongoDB", "Axios"],
-      github: "https://github.com/shashidhar-pothukuchi",
-      demo: "https://www.psds.dev"
+      github: "https://github.com/shashidhar-pothukuchi/sgma-frontend"
     },
     {
       title: "XV6 Operating System Feature Implementation",
       description: "Developed OS level shell commands (ls, uniq, find, cat, nice, ps) and handled kernel level programs. Implemented process scheduling (FIFO, priority), system calls (sleep, sbrk), and lazy allocation handling page faults. Improved file system capacity and scalability.",
       tech: ["C", "Unix", "Kernel", "OS"],
-      github: "https://github.com/shashidhar-pothukuchi",
-      demo: "https://www.psds.dev"
+      // github: "https://github.com/shashidhar-pothukuchi"
     },
     {
-      title: "Spring Portfolio Application",
-      description: "Architected a microservice-based REST MVC portfolio application using Spring Boot. Implemented Dependency Injection, IOC, Spring Data JPA, and Feign Client. Developed REST APIs with JUnit testing and Swagger documentation.",
-      tech: ["Spring Boot", "Java", "Microservices", "REST API"],
-      github: "https://github.com/shashidhar-pothukuchi",
-      demo: "https://www.psds.dev"
+      title: "Robotic Simulation using Deep Q Learning",
+      description: "Developed a Q learning and a Deep Q learning agent, significantly improving the efficiency of simulation of mixing objects inCoppeliaSim using Python",
+      tech: ["Python", "Deep Learning", "CoppeliaSim", "NLTK"],
+      // github: "https://github.com/shashidhar-pothukuchi"
     },
     {
       title: "Aspect-Based Sentiment Analysis",
       description: "Built a full-stack web application for product sentiment analysis using Amazon reviews. Used NLTK and Sci-kit Learn for NLP. Backend with Flask and Node.js for scraping, frontend with React and Material-UI.",
-      tech: ["Python", "Flask", "React", "NLP", "Node.js"],
-      github: "https://github.com/shashidhar-pothukuchi",
-      demo: "https://www.psds.dev"
+      tech: ["Python", "Flask", "React", "NLTK", "Event Extraction", "Node.js"],
+      github: "https://github.com/shashidhar-pothukuchi/MPA7"
     }
   ];
 
@@ -135,7 +145,7 @@ const Portfolio = () => {
       location: "Hyderabad, India",
       period: "Aug 2016 - June 2020",
       gpa: "3.79",
-      achievements: ["WES Accredited"]
+      achievements: [""]
     }
   ];
 
@@ -255,8 +265,6 @@ const Portfolio = () => {
                     </p>
                   </div>
 
-                  {/* Quick Stats */}
-                  {/* Quick Stats */}
                   <div className="grid grid-cols-2 gap-4 pt-4">
                     <div className="bg-[#F7F6F2] dark:bg-[#2A2A2A] rounded-xl p-6 text-center transition-colors duration-300">
                       <p className="text-3xl font-bold text-[#4A70A9] mb-1">4+</p>
@@ -266,21 +274,6 @@ const Portfolio = () => {
                       <p className="text-3xl font-bold text-[#4A70A9] mb-1">20+</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400 font-medium transition-colors duration-300">Projects Completed</p>
                     </div>
-                    <div className="bg-[#F7F6F2] dark:bg-[#2A2A2A] rounded-xl p-6 text-center transition-colors duration-300">
-                      <p className="text-3xl font-bold text-[#4A70A9] mb-1">4.0</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 font-medium transition-colors duration-300">GPA (Masters)</p>
-                    </div>
-                    <div className="bg-[#F7F6F2] dark:bg-[#2A2A2A] rounded-xl p-6 text-center transition-colors duration-300">
-                      <p className="text-3xl font-bold text-[#4A70A9] mb-1">100%</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 font-medium transition-colors duration-300">Commitment</p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-2xl font-semibold text-black dark:text-white mb-4 transition-colors duration-300">My Approach</h3>
-                    <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">
-                      I believe in writing clean, maintainable code and following best practices. I thrive in collaborative environments and enjoy mentoring junior developers to build high-performing teams.
-                    </p>
                   </div>
                 </div>
 
@@ -294,7 +287,7 @@ const Portfolio = () => {
                       <div>
                         <p className="text-sm font-semibold text-[#4A70A9] mb-3 uppercase tracking-wide">Languages</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Java', 'Python', 'C++', 'SQL', 'JavaScript'].map((skill) => (
+                          {['Java', 'Python', 'JavaScript', 'SQL', 'C++'].map((skill) => (
                             <span
                               key={skill}
                               className="px-4 py-2 bg-[#F7F6F2] dark:bg-[#2A2A2A] text-black dark:text-white rounded-full text-sm font-medium hover:bg-[#8FABD4] hover:text-white transition-all duration-200 cursor-default"
@@ -309,7 +302,7 @@ const Portfolio = () => {
                       <div>
                         <p className="text-sm font-semibold text-[#4A70A9] mb-3 uppercase tracking-wide">Tools & Frameworks</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Spring Boot', 'Spring Batch', 'Angular', 'React.js', 'PyTorch', 'TensorFlow', 'Hibernate', 'RESTful APIs', 'gRPC', 'GraphQL', 'Apache Kafka'].map((skill) => (
+                          {['Spring Boot', 'React.js', 'Node.js', 'Angular', 'Kafka', 'TensorFlow'].map((skill) => (
                             <span
                               key={skill}
                               className="px-4 py-2 bg-[#F7F6F2] dark:bg-[#2A2A2A] text-black dark:text-white rounded-full text-sm font-medium hover:bg-[#8FABD4] hover:text-white transition-all duration-200 cursor-default"
@@ -324,7 +317,7 @@ const Portfolio = () => {
                       <div>
                         <p className="text-sm font-semibold text-[#4A70A9] mb-3 uppercase tracking-wide">Data</p>
                         <div className="flex flex-wrap gap-2">
-                          {['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Kibana', 'FlywayDB', 'Apache Spark'].map((skill) => (
+                          {['PostgreSQL', 'MongoDB', 'Redis', 'Apache Spark', 'Elasticsearch'].map((skill) => (
                             <span
                               key={skill}
                               className="px-4 py-2 bg-[#F7F6F2] dark:bg-[#2A2A2A] text-black dark:text-white rounded-full text-sm font-medium hover:bg-[#8FABD4] hover:text-white transition-all duration-200 cursor-default"
@@ -339,7 +332,7 @@ const Portfolio = () => {
                       <div>
                         <p className="text-sm font-semibold text-[#4A70A9] mb-3 uppercase tracking-wide">Cloud Platforms</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Azure AKS', 'Azure ADO', 'AWS EC2', 'Docker', 'Kubernetes', 'EKS', 'Jira', 'Gradle', 'Maven', 'Harness CI/CD', 'IBM RTC', 'Git'].map((skill) => (
+                          {['AWS', 'Azure', 'Docker', 'Kubernetes', 'Git', 'CI/CD'].map((skill) => (
                             <span
                               key={skill}
                               className="px-4 py-2 bg-[#F7F6F2] dark:bg-[#2A2A2A] text-black dark:text-white rounded-full text-sm font-medium hover:bg-[#8FABD4] hover:text-white transition-all duration-200 cursor-default"
@@ -350,26 +343,11 @@ const Portfolio = () => {
                         </div>
                       </div>
 
-                      {/* Testing */}
+                      {/* Testing & Design */}
                       <div>
-                        <p className="text-sm font-semibold text-[#4A70A9] mb-3 uppercase tracking-wide">Testing</p>
+                        <p className="text-sm font-semibold text-[#4A70A9] mb-3 uppercase tracking-wide">Testing & Design</p>
                         <div className="flex flex-wrap gap-2">
-                          {['JUnit', 'Mockito', 'Puppeteer', 'Postman', 'Swagger', 'Log4j'].map((skill) => (
-                            <span
-                              key={skill}
-                              className="px-4 py-2 bg-[#F7F6F2] dark:bg-[#2A2A2A] text-black dark:text-white rounded-full text-sm font-medium hover:bg-[#8FABD4] hover:text-white transition-all duration-200 cursor-default"
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Design Methodologies */}
-                      <div>
-                        <p className="text-sm font-semibold text-[#4A70A9] mb-3 uppercase tracking-wide">Design Methodologies</p>
-                        <div className="flex flex-wrap gap-2">
-                          {['Microservices', 'Agile (Scrum)', 'MVC', 'Object‑Oriented Design', 'Design Patterns (Factory, Saga)'].map((skill) => (
+                          {['JUnit', 'Mockito', 'Microservices', 'Agile', 'MVC'].map((skill) => (
                             <span
                               key={skill}
                               className="px-4 py-2 bg-[#F7F6F2] dark:bg-[#2A2A2A] text-black dark:text-white rounded-full text-sm font-medium hover:bg-[#8FABD4] hover:text-white transition-all duration-200 cursor-default"
@@ -469,24 +447,25 @@ const Portfolio = () => {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 border-2 border-[#4A70A9] text-[#4A70A9] rounded-lg hover:bg-[#4A70A9] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium"
-                    >
-                      <Github size={18} />
-                      Code
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-[#4A70A9] text-white rounded-lg hover:bg-[#8FABD4] hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium"
-                    >
-                      <ExternalLink size={18} />
-                      Demo
-                    </a>
+                    {project.github ? (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 border-2 border-[#4A70A9] text-[#4A70A9] rounded-lg hover:bg-[#4A70A9] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium"
+                      >
+                        <Github size={18} />
+                        Code
+                      </a>
+                    ) : (
+                      <button
+                        disabled
+                        className="flex items-center gap-2 px-4 py-2 border-2 border-gray-300 text-gray-400 rounded-lg cursor-not-allowed font-medium"
+                      >
+                        <Github size={18} />
+                        Code
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}
@@ -527,7 +506,16 @@ const Portfolio = () => {
                   className="flex items-center gap-4 p-4 bg-[#F7F6F2] dark:bg-[#2A2A2A] rounded-lg hover:bg-[#8FABD4] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                 >
                   <Linkedin className="text-[#4A70A9] group-hover:text-white transition-colors duration-300" size={24} />
-                  <span className="text-lg font-medium text-black dark:text-white group-hover:text-white transition-colors duration-300">linkedin.com/in/shashidhar-psd</span>
+                  <span className="text-lg font-medium text-black dark:text-white group-hover:text-white transition-colors duration-300">linkedin.com/shashidhar-psd</span>
+                </a>
+                <a
+                  href="https://leetcode.com/u/shashidhar0302/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 bg-[#F7F6F2] dark:bg-[#2A2A2A] rounded-lg hover:bg-[#8FABD4] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 group"
+                >
+                  <LeetCodeIcon className="text-[#4A70A9] group-hover:text-white transition-colors duration-300" size={24} />
+                  <span className="text-lg font-medium text-black dark:text-white group-hover:text-white transition-colors duration-300">leetcode.com/shashidhar0302</span>
                 </a>
               </div>
             </div>
