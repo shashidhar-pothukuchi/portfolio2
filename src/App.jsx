@@ -524,7 +524,7 @@ const Portfolio = () => {
 
         {/* Footer */}
         <footer className="py-8 px-6 text-center text-gray-600 dark:text-gray-400 transition-colors duration-300">
-          <p>© 2024 Sai Durga Shashidhar Pothukuchi. Built with React & Tailwind CSS</p>
+          <p>© 2025 Sai Durga Shashidhar Pothukuchi. Built with React & Tailwind CSS</p>
         </footer>
       </div>
 
